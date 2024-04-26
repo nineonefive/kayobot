@@ -7,5 +7,8 @@ class Colors {
 final botFooter = EmbedFooterBuilder(text: "Made with 💙 by 915");
 
 class Emojis {
+  static final thatsWukong =
+      ReactionBuilder(name: 'thats_wukong', id: Snowflake(1215420386401849425));
+
   static discord(String unicode) => ReactionBuilder(name: unicode, id: null);
 }

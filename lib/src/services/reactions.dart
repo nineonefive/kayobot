@@ -139,6 +139,7 @@ class RandomReaction extends MultiReaction {
 class Reactions {
   static final List<Reaction> reactions = [
     SingleReaction("cornball", Emojis.discord("🌽")),
-    SingleReaction("blastx", Emojis.discord("🤮"))
+    SingleReaction("blastx", Emojis.discord("🤮")),
+    SingleReaction("wukong", Emojis.thatsWukong)
   ];
 }
