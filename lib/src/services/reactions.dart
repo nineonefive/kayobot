@@ -4,6 +4,7 @@ import 'package:nyxx/nyxx.dart';
 
 import '../events.dart';
 import '../kayobot.dart';
+import '../style.dart';
 import '../util.dart';
 
 const penguinDiscord = Snowflake(895861645665009725);
@@ -136,5 +137,8 @@ class RandomReaction extends MultiReaction {
 }
 
 class Reactions {
-  static final List<Reaction> reactions = [];
+  static final List<Reaction> reactions = [
+    SingleReaction("cornball", Emojis.discord("🌽")),
+    SingleReaction("blastx", Emojis.discord("🤮"))
+  ];
 }
