@@ -79,8 +79,9 @@ class KayoBot {
     botUser = await client.users.fetchCurrentUser();
     logger.info("Logged in as ${botUser.username} with user id $userId");
 
-    // Set the neonbot status
+    // Set the kayobot status
     setPresence(online: true);
+    Timer.periodic(Duration(minutes: 5), (timer) => setPresence(online: true));
 
     // Connect events to the event bus
     _eventSubscriptions
@@ -137,7 +138,7 @@ class KayoBot {
         status: CurrentUserStatus.online,
         isAfk: false,
         activities: [
-          ActivityBuilder(name: "VALORANT", type: ActivityType.game),
+          ActivityBuilder(name: "Minecraft VALORANT", type: ActivityType.game),
         ],
       ));
     } else {
