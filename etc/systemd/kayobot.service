@@ -1,0 +1,14 @@
+[Unit]
+Description=Kayobot discord bot
+
+[Service]
+ExecStart=sh /home/nineonefive/kayobot/bin/run.sh
+WorkingDirectory=/home/nineonefive/kayobot
+Type=exec
+Restart=always
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=default.target
