@@ -140,6 +140,7 @@ class Reactions {
   static final List<Reaction> reactions = [
     SingleReaction("cornball", Emojis.discord("🌽")),
     SingleReaction("blastx", Emojis.discord("🤮")),
-    SingleReaction("wukong", Emojis.thatsWukong)
+    SingleReaction("wukong", Emojis.thatsWukong),
+    SingleReaction("ctf", Emojis.stop)
   ];
 }
