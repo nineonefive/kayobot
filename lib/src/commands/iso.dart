@@ -14,7 +14,9 @@ final isoUlt = ChatCommand(
       var victor = Random().nextInt(2) == 0 ? iso : user;
       await context.respond(MessageBuilder(
           content:
-              "${Emojis.isoUlt.emoteString} ${victor.id.userMention ?? 'error'} has won the duel!"));
+              "${Emojis.isoUlt.emoteString} ${victor.id.userMention ?? 'error'} has won the duel!",
+          allowedMentions: AllowedMentions.users([]),
+          suppressNotifications: true));
     }));
 
 final iso = ChatGroup('iso', 'Iso-related commands', children: [isoUlt]);
