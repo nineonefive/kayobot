@@ -16,9 +16,25 @@ class Emojis {
   static final isoUlt =
       ReactionBuilder(name: 'isoult', id: Snowflake(1234212228853534751));
 
-  static discord(String unicode) => ReactionBuilder(name: unicode, id: null);
+  static final squidCopium =
+      ReactionBuilder(name: 'squid_copium', id: Snowflake(1135074095764082769));
+
+  static final oliveAngry =
+      ReactionBuilder(name: 'OliveAngry', id: Snowflake(1003886681159635005));
+
+  static final deadlockMoment = ReactionBuilder(
+      name: 'deadlockmoment', id: Snowflake(1216586330801176606));
+
+  static final gup =
+      ReactionBuilder(name: 'gup', id: Snowflake(1159258536560304209));
+
+  static final glazeWarrior =
+      ReactionBuilder(name: 'glazewarrior', id: Snowflake(1197739759657811968));
+
+  static ReactionBuilder discord(String unicode) =>
+      ReactionBuilder(name: unicode, id: null);
 }
 
 extension Emoji on ReactionBuilder {
-  String get emoteString => '<:${build()}>';
+  String get emoteString => id == null ? build() : '<:${build()}>';
 }

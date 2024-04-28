@@ -68,6 +68,7 @@ class KayoBot {
     // Register all slash commands before the bot connects
     final commands = CommandsPlugin(prefix: (message) => '!')
       ..addCommand(iso)
+      ..addCommand(quote)
       ..onCommandError.listen(errorHandler);
 
     // Get our discord token
