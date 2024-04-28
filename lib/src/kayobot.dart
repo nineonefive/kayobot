@@ -66,8 +66,8 @@ class KayoBot {
   /// Also initializes any needed services
   Future<void> connect() async {
     // Register all slash commands before the bot connects
-    final commands = CommandsPlugin(prefix: slashCommand())
-      // todo: register any slash commands here
+    final commands = CommandsPlugin(prefix: (message) => '!')
+      ..addCommand(iso)
       ..onCommandError.listen(errorHandler);
 
     // Get our discord token

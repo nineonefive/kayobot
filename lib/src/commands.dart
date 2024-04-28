@@ -2,12 +2,7 @@ import 'dart:async';
 
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_commands/nyxx_commands.dart';
-
-Future<String> Function(MessageCreateEvent) slashCommand() {
-  return (event) async {
-    return "/";
-  };
-}
+export 'commands/iso.dart' show iso;
 
 Future<void> errorHandler(error) async {
   if (error is CheckFailedException) {
