@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:kayobot/src/style.dart';
 import 'package:kayobot/src/util.dart';
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_commands/nyxx_commands.dart';
@@ -12,7 +13,8 @@ final isoUlt = ChatCommand(
       var iso = context.user;
       var victor = Random().nextInt(2) == 0 ? iso : user;
       await context.respond(MessageBuilder(
-          content: "${victor.id.userMention ?? 'error'} has won the duel!"));
+          content:
+              "${Emojis.isoUlt.emoteString} ${victor.id.userMention ?? 'error'} has won the duel!"));
     }));
 
 final iso = ChatGroup('iso', 'Iso-related commands', children: [isoUlt]);
