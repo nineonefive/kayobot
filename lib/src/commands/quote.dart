@@ -17,7 +17,8 @@ final availableQuotes = [
   "Any gup fans in the chat? ${Emojis.gup.emoteString}",
   "Loot positive mindset ${Emojis.lethalCompanyBoombox.emoteString}",
   "🪿🥚${Emojis.glazeWarrior.emoteString}",
-  "Mama mia"
+  "Mama mia",
+  "Your tribe has spoken ${Emojis.jeffWhat.emoteString}"
 ];
 
 final quote = ChatCommand(

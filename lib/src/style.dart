@@ -37,6 +37,9 @@ class Emojis {
   static final lethalCompanyBoombox = ReactionBuilder(
       name: 'LethalCompanyBoombox', id: Snowflake(1196684914221928518));
 
+  static final jeffWhat =
+      ReactionBuilder(name: 'jeffwhat', id: Snowflake(1164717515977527307));
+
   static ReactionBuilder discord(String unicode) =>
       ReactionBuilder(name: unicode, id: null);
 }
