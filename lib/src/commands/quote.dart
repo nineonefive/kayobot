@@ -6,7 +6,7 @@ import 'package:nyxx_commands/nyxx_commands.dart';
 import '../style.dart';
 
 final availableQuotes = [
-  "Cornball!",
+  "Cornball! ${Emojis.mh676.emoteString}",
   "That's Wukong, from League of Legends! ${Emojis.thatsWukong.emoteString}",
   "Pistol rounds don't count ${Emojis.squidCopium.emoteString}",
   "It's so free! 🦑",
