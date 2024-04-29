@@ -1,3 +1,5 @@
+@Skip("Github doesn't have api keys")
+
 import 'package:kayobot/src/services/credentials.dart';
 import 'package:test/test.dart';
 
