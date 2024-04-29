@@ -5,14 +5,13 @@ import 'package:nyxx/nyxx.dart';
 import '../events.dart';
 import '../kayobot.dart';
 import '../style.dart';
-import '../util.dart';
 import 'stickers.dart';
 
 const penguinDiscord = Snowflake(895861645665009725);
 
 class AutoreactService {
   static late final AutoreactService _instance;
-  static final splitPattern = RegExp(r"\s+");
+  static final splitPattern = RegExp(r"\W+");
 
   static void init() {
     _instance = AutoreactService._();
@@ -54,12 +53,6 @@ class AutoreactService {
   /// Applies each reaction to the message [event.message]
   Future<void> reactToMessage(MessageCreateEvent event) async {
     var content = event.message.content;
-
-    // Replace the neonbot mention with neonbot
-    if (event.mentions.any((u) => u.id == KayoBot().userId)) {
-      content =
-          content.replaceFirst(KayoBot().userId.userMention ?? "", "neonbot");
-    }
 
     var reactions = content
         .split(splitPattern)
