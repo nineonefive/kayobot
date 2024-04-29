@@ -1,9 +1,10 @@
 import 'dart:math';
 
-import 'package:kayobot/src/style.dart';
-import 'package:kayobot/src/util.dart';
 import 'package:nyxx/nyxx.dart';
 import 'package:nyxx_commands/nyxx_commands.dart';
+
+import '../style.dart';
+import '../util.dart';
 
 final isoUlt = ChatCommand(
     "ult",

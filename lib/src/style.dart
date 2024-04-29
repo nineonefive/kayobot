@@ -34,6 +34,9 @@ class Emojis {
   static final mh676 =
       ReactionBuilder(name: 'mh676', id: Snowflake(1106797249306050651));
 
+  static final lethalCompanyBoombox = ReactionBuilder(
+      name: 'LethalCompanyBoombox', id: Snowflake(1196684914221928518));
+
   static ReactionBuilder discord(String unicode) =>
       ReactionBuilder(name: unicode, id: null);
 }

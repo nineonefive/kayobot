@@ -15,7 +15,7 @@ final availableQuotes = [
   "Deadlock moment ${Emojis.deadlockMoment.emoteString}",
   "Green Fortnite",
   "Any gup fans in the chat? ${Emojis.gup.emoteString}",
-  "Loot positive mindset",
+  "Loot positive mindset ${Emojis.lethalCompanyBoombox.emoteString}",
   "🪿🥚${Emojis.glazeWarrior.emoteString}",
   "Mama mia"
 ];
