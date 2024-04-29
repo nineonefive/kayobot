@@ -6,6 +6,7 @@ import '../events.dart';
 import '../kayobot.dart';
 import '../style.dart';
 import '../util.dart';
+import 'stickers.dart';
 
 const penguinDiscord = Snowflake(895861645665009725);
 
@@ -123,6 +124,22 @@ class MultiReaction extends Reaction {
   String toString() => "MultiReaction($keyword)";
 }
 
+class StickerReaction extends Reaction {
+  final String stickerName;
+
+  StickerReaction(super.keyword, this.stickerName);
+
+  @override
+  Future<void> react(Message message) async {
+    var stickerId = await StickerService().getSticker(stickerName);
+
+    if (stickerId != Snowflake.zero) {
+      await message.channel
+          .sendMessage(MessageBuilder(stickerIds: [stickerId]));
+    }
+  }
+}
+
 class RandomReaction extends MultiReaction {
   RandomReaction(super.keyword, super.emojis);
 
@@ -141,6 +158,7 @@ class Reactions {
     SingleReaction("cornball", Emojis.discord("🌽")),
     SingleReaction("blastx", Emojis.discord("🤮")),
     SingleReaction("wukong", Emojis.thatsWukong),
-    SingleReaction("ctf", Emojis.stop)
+    SingleReaction("ctf", Emojis.stop),
+    StickerReaction("yoru", "yoru_roll")
   ];
 }

@@ -18,7 +18,8 @@ final availableQuotes = [
   "Loot positive mindset ${Emojis.lethalCompanyBoombox.emoteString}",
   "🪿🥚${Emojis.glazeWarrior.emoteString}",
   "Mama mia",
-  "Your tribe has spoken ${Emojis.jeffWhat.emoteString}"
+  "Your tribe has spoken ${Emojis.jeffWhat.emoteString}",
+  "Comcast moment ${Emojis.lag.emoteString}"
 ];
 
 final quote = ChatCommand(

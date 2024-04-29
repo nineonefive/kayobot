@@ -40,10 +40,17 @@ class Emojis {
   static final jeffWhat =
       ReactionBuilder(name: 'jeffwhat', id: Snowflake(1164717515977527307));
 
+  static final lag =
+      ReactionBuilder(name: 'lag', id: Snowflake(1088301062018056295));
+
   static ReactionBuilder discord(String unicode) =>
       ReactionBuilder(name: unicode, id: null);
 }
 
 extension Emoji on ReactionBuilder {
   String get emoteString => id == null ? build() : '<:${build()}>';
+}
+
+class Stickers {
+  static final yoruRickRoll = Snowflake(1164717515977527307);
 }
